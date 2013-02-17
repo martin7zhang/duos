@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Duos - tools by Martin</title>
+        <script src="jquery-1.9.1.min.js"></script>
+<script>
+$(function(){
+    $("#conversion").click(function() {
+        var reg = /\\/g;
+        var s = $("#url").val().replace(reg, "/"); 
+        console.info(s);
+        $("#url2").text(s);
+    });
+});    
+</script>
+    </head>
+    <body>
+        Windows path: <br />
+        <textarea id="url"  rows=3 cols=80>F:\martin\tools\duos</textarea>
+        <br />
+        Linux path: <br />
+        <textarea id="url2" rows=3 cols=80></textarea>
+        <br />
+        <button id="conversion">Conversion</button>
+    </body>
+</html>
